@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccountController!{% endblock %}
+
+{% block body %}
+    <h1>Account</h1>
+
+    <ul>
+        <li>Votre email :  {{ email }}</li>
+        <li>Votre mot de passe :  *******</li>
+        <a href= " {{ path('app_logout') }}">Déconnexion</a>
+    </ul>
+{% endblock %}
