@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+    {% if roles is defined %}
+        {% if 'ROLE_ADMIN' in roles %}
+            {# Passer de admin à user #}
+            <button v-if="!show" v-on:click="show = !show">
+                Passer en mode admin
+            </button>
+            <button v-if="show" v-on:click="show = !show">
+                Passer en mode user
+            </button>
+            <br/>
+            {# Seulement pour admin #}
+            <a v-if="show" href= " {{ path('add') }}">Ajouter un article</a>
+        {% endif %}
+    {% endif %}
+
+    <div class="center">
+        <div id="article_cont">
+            {% if articles | length >0 %}
+                {% for article in articles %}
+                    <div class="article">
+                        <h2> {{ article.title }} </h2>
+                        <a class="add_cart" @click="count++" href= "{{ path('cart_add', {'id': article.id}) }}"><i class="fa-solid fa-cart-plus fa-xl"></i></a>
+
+                        <a href="{{ path('app_article',{'id':article.id}) }}"><img src="{{article.image}}" alt="" /></a>
+
+                        <p class="cost" v-if="!show"> {{ article.price }} € </p>
+                        
+                        {# Seulement pour admin #}
+                        <br v-if="show"/>
+                        <button v-if="show" @click="onDelete({{ article.id }})">Supprimer</button>
+
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h2>Aucun articles ne correspondent à votre recherche : {{ search }}</h2>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+{% endblock %}
