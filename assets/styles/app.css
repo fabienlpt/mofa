@@ -149,3 +149,35 @@ nav i {
 /* Fin page article/{id} */
   
   
+/* Page Shopping-cart */
+.cart_content {
+    display: flex;
+    justify-content: center;
+  }
+  .cart_index {
+    width: 75%
+  }
+  table {
+      border-spacing: 0px;
+      border: 3px solid black;
+      width: 100%;
+      margin: auto;
+  }
+  
+  tbody, tfoot {
+      text-align: center;
+  }
+  
+  tfoot td:first-child {
+    text-align: right;
+  }
+  tbody td {
+      border: 1px solid rgb(0, 0, 0);
+  }
+  td{
+      padding: 20px;
+  }
+  .cart_index .remove {
+    color: red;
+  }
+  /* Fin page Shopping-cart*/
