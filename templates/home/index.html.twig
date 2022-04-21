@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
+{% block title %}{{ parent() }} | Accueil{% endblock %}
 
 {% block body %}
     {% if roles is defined %}

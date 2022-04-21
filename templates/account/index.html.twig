@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccountController!{% endblock %}
+{% block title %}{{ parent() }} | Profil{% endblock %}
 
 {% block body %}
-    <h1>Account</h1>
+    <h1>Profil : </h1>
 
     <ul>
         <li>Votre email :  {{ email }}</li>
