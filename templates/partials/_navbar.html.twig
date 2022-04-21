@@ -1,0 +1,20 @@
+<nav>
+    <div class="nav-container">
+        <div id="logo">
+            <a href= "{{ path('app_homepage') }}"><img src={{ asset('img/logo.svg') }} alt="logo" /></a>
+        </div>
+
+        <div class="search">
+          <form v-on:submit.prevent="checkSubmit"><input  @input="updateInput" ref="input" type="search" name="recherche" id="recherche" placeholder="Rechercher ..." /></form>
+        </div>
+
+        <ul id="icons">
+            <li>
+                <a href= "{{ path('app_register') }}"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li>
+                <a id="logo_shop" href= "{{ path('cart_index') }}"><i class="fa-solid fa-bag-shopping"></i><p v-if="count>0">${count}</p></a>
+            </li>
+        </ul>
+    </div>
+</nav>

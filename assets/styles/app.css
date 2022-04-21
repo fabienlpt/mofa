@@ -1,22 +1,22 @@
 @import '@fortawesome/fontawesome-free/css/all.css';
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
 
 body {
-  margin: 0 auto;
-  background: rgba(254, 254, 254, 0.8);
-  padding-bottom: 4rem;
-  color: #333;
-  overflow-x: hidden;
+    margin: 0 auto;
+    background: rgba(254, 254, 254, 0.8);
+    padding-bottom: 4rem;
+    color: #333;
+    overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 #main {
@@ -24,10 +24,82 @@ a {
 }
 
 .center {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* debut de la navbar */
+nav {
+    padding: 0.8rem 2.4rem;
+    background: rgba(42, 42, 42, 0.97);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 2px 4px -3px rgba(26, 24, 24, 0.4);
+}
+
+nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+nav .nav-container #logo {
+    height: 100px;
+    width: 40%;
+}
+
+nav .nav-container #logo img {
+    height: 100%;
+}
+
+nav .nav-container #icons {
+    display: flex;
+    font-size: 24px;
+    width: 40%;
+}
+
+nav .nav-container #icons li {
+    margin-left: calc(35% + 8px);
+}
+
+.search {
+    width: 60%;
+}
+
+.search #recherche{
+    width: 100%;
+    margin: 9px;
+    padding: 10px;
+    float: left;
+    border:0px;
+    border-radius: 30px;
+    text-align:center;
+    outline: 2px solid black;
+}
+
+nav i {
+    color: white;
+}
+
+#logo_shop {
+    position: relative;
+}
+
+#logo_shop  p{
+    top: 40%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 900;
+    position: absolute;
+    color: rgb(42, 42, 42);;
+    text-align: center;
+}
+/* fin de la navbar */
 
 /* Affichage article homepage*/
 
@@ -36,14 +108,14 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     width : 60%;
-  }
-  
-  .article {
+}
+
+.article {
     margin: 15px ;
     text-align: center;
     position: relative;
-  }
-  .article .add_cart {
+}
+.article .add_cart {
     position: absolute;
     bottom: 10%;
     right: 0%;
@@ -51,11 +123,11 @@ a {
     background: rgba(0,0,0,0.8);
     border-radius: 50%;
     padding: 10px;
-  }
-  .cost {
+}
+.cost {
     font-weight: bold;
-  }
-  /* fin d'affichage article home page */
+}
+/* fin d'affichage article home page */
 
   
 /* Page article/{id} */
@@ -63,15 +135,17 @@ a {
     width: 60%;
     display: flex;
     justify-content: space-between;
-  }
-  #article-index img {
+}
+
+#article-index img {
     width: 50%;
     height: auto;
     margin-right: 10%;
-  }
-  #article-index h1 {
+}
+
+#article-index h1 {
     text-align: center;
-  }
-  /* Fin page article/{id} */
+}
+/* Fin page article/{id} */
   
   
