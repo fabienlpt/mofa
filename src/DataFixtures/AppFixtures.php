@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 12; ++$i ) {
             $article = new Article();
             $article -> setTitle($table[$i]);
-            $article -> setDescription('La montre'.$table[$i].' est une jolie montre créer par xxx.');
+            $article -> setDescription('La montre '.$table[$i].' est une jolie montre créer par xxx.');
             $article -> setImage('img/im'.($i + 1).'.jpg');
             $article -> setPrice(mt_rand(10, 100));
 
