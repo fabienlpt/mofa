@@ -23,4 +23,23 @@ class HomeController extends AbstractController
             'articles' => $articleRepository ->findAll()
         ]);
     }
+
+    
+    #[Route('/{search}', name: 'app_searchpage')]
+    public function recherche(string $search, ArticleRepository $articleRepository): Response
+    {           
+        $articles = $articleRepository->findBySearch($search);
+
+        if( $user = $this->getUser() ) {
+            return $this->render('home/index.html.twig', [
+                'user' => $user->getEmail(),
+                'articles' => $articles
+            ]);
+        }
+        return $this->render('home/index.html.twig', [
+            'user' => 'anonyme',
+            'search' => $search,
+            'articles' => $articles
+        ]);
+    }
 }

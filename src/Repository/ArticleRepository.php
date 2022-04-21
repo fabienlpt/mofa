@@ -45,6 +45,16 @@ class ArticleRepository extends ServiceEntityRepository
         }
     }
     
+    public function findBySearch(string $query)
+    {
+        return $this->createQueryBuilder('q')
+                    ->select('q.id, q.title, q.price, q.image')
+                    ->where('q.title LIKE :search')
+                    ->setParameter('search', "%{$query}%")
+                    ->getQuery()
+                    ->getResult();
+    }
+    
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */
