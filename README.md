@@ -19,5 +19,5 @@ symfony console d:m:m
 # ou php bin/console d:m:m
  
 symfony console d:f:l --no-interaction
-# ou php/console d:f:l --no-interaction
+# ou php bin/console d:f:l --no-interaction
 ```
