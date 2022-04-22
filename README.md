@@ -21,3 +21,8 @@ symfony console d:m:m
 symfony console d:f:l --no-interaction
 # ou php bin/console d:f:l --no-interaction
 ```
+Exécuter le projet
+```bash
+npm run dev
+symfony serve
+```
