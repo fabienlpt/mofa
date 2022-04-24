@@ -111,25 +111,22 @@ nav i {
     width : 60%;
 }
 .article h2 {
-    padding-bottom: 10%;
+    font-size: 1.2vw;
+}
+.article h2, .article .cost {
+    padding-left: 5%;
+}
+.article #add {
+    float: right;
+    padding-right: 5%;
+    font-weight: 600;
 }
 .article {
     background-color: #F5F5F5;
     margin: 15px ;
-    text-align: center;
-    position: relative;
-}
-.article .add_cart {
-    position: absolute;
-    bottom: 10%;
-    right: 0%;
-    color:white;
-    background: #2D2D34;
-    border-radius: 50%;
-    padding: 10px;
 }
 .cost {
-    font-weight: bold;
+    font-weight: 500;
 }
 /* fin d'affichage article home page */
 
